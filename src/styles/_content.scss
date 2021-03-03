@@ -1,0 +1,66 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 5rem;
+  .content__today {
+    width: 50%;
+    text-align: center;
+
+    .today__temperature {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+      justify-content: center;
+
+      .temperature__number {
+        padding: 1rem;
+      }
+    }
+    .today__extraInfo {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      .extraInfo__humidity {
+        padding: 1rem;
+      }
+      .extraInfo__wind {
+        padding: 1rem;
+      }
+    }
+  }
+  .content__week {
+    width: 50%;
+
+    .week__days {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .day {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background: rgb(137, 196, 244);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .content {
+    flex-direction: column;
+  }
+  .content__today {
+    width: 100%;
+  }
+  .content__week {
+    width: 100%;
+  }
+}
